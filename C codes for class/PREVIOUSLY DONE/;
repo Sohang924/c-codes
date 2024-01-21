@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+	int a = 12;
+	float b = 1.2;
+	char c = "M";
+	double d = 123.673;
+	printf("The integer value is:\t %d", a);
+	printf("The float value is:\t %f",b);
+	printf("The charecter value is:\t%c",c);
+	printf("The double value is:\t%lf", d);
+	return 0;
+}
+

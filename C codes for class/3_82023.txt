@@ -1,0 +1,122 @@
+03/08/2023
+
+Basic Structure of c
+
+// comments are written in this form
+continued comment /* .......*/
+
+#include<stdio.h> --> its a header file , responsible for input and output..
+#include<conio.h>
+
+
+rwx - read write exicute
+pwd = present work dirctory
+
+
+kiit@BT07041:~$ ls
+Hello_World.c  Hello_World.s  Hello_World_2.c  a.out
+
+kiit@BT07041:~$ ls -l
+total 28
+-rw-r--r-- 1 kiit kiit    69 Aug  1 17:02 Hello_World.c
+-rw-r--r-- 1 kiit kiit   689 Aug  1 17:06 Hello_World.s
+-rw-r--r-- 1 kiit kiit    68 Aug  3 15:06 Hello_World_2.c
+-rwxr-xr-x 1 kiit kiit 15968 Aug  3 15:06 a.out
+
+kiit@BT07041:~$ ls -la
+total 88
+drwxr-x--- 3 kiit kiit  4096 Aug  3 15:06 .
+drwxr-xr-x 3 root root  4096 Jun 28 00:26 ..
+-rw------- 1 kiit kiit 12288 Aug  1 16:23 .HelloWorld.c.swp
+-rw------- 1 kiit kiit 12288 Aug  1 16:56 .Hello_World.swp
+-rw------- 1 kiit kiit   365 Aug  1 17:12 .bash_history
+-rw-r--r-- 1 kiit kiit   220 Jun 28 00:26 .bash_logout
+-rw-r--r-- 1 kiit kiit  3771 Jun 28 00:26 .bashrc
+drwx------ 2 kiit kiit  4096 Jun 28 00:27 .cache
+-rw-r--r-- 1 kiit kiit     0 Aug  3 15:01 .motd_shown
+-rw-r--r-- 1 kiit kiit   807 Jun 28 00:26 .profile
+-rw-r--r-- 1 kiit kiit     0 Jun 28 00:29 .sudo_as_admin_successful
+-rw------- 1 kiit kiit  7490 Aug  3 15:06 .viminfo
+-rw-r--r-- 1 kiit kiit    69 Aug  1 17:02 Hello_World.c
+-rw-r--r-- 1 kiit kiit   689 Aug  1 17:06 Hello_World.s
+-rw-r--r-- 1 kiit kiit    68 Aug  3 15:06 Hello_World_2.c
+-rwxr-xr-x 1 kiit kiit 15968 Aug  3 15:06 a.out
+
+kiit@BT07041:~$ pwd
+/home/kiit
+
+kiit@BT07041:~$ mkdir kiit_class               // makes the directory
+kiit@BT07041:~$ ls -la
+total 92
+drwxr-x--- 4 kiit kiit  4096 Aug  3 15:36 .
+drwxr-xr-x 3 root root  4096 Jun 28 00:26 ..
+-rw------- 1 kiit kiit 12288 Aug  1 16:23 .HelloWorld.c.swp
+-rw------- 1 kiit kiit 12288 Aug  1 16:56 .Hello_World.swp
+-rw------- 1 kiit kiit   365 Aug  1 17:12 .bash_history
+-rw-r--r-- 1 kiit kiit   220 Jun 28 00:26 .bash_logout
+-rw-r--r-- 1 kiit kiit  3771 Jun 28 00:26 .bashrc
+drwx------ 2 kiit kiit  4096 Jun 28 00:27 .cache
+-rw-r--r-- 1 kiit kiit     0 Aug  3 15:01 .motd_shown
+-rw-r--r-- 1 kiit kiit   807 Jun 28 00:26 .profile
+-rw-r--r-- 1 kiit kiit     0 Jun 28 00:29 .sudo_as_admin_successful
+-rw------- 1 kiit kiit  7490 Aug  3 15:06 .viminfo
+-rw-r--r-- 1 kiit kiit    69 Aug  1 17:02 Hello_World.c
+-rw-r--r-- 1 kiit kiit   689 Aug  1 17:06 Hello_World.s
+-rw-r--r-- 1 kiit kiit    68 Aug  3 15:06 Hello_World_2.c
+-rwxr-xr-x 1 kiit kiit 15968 Aug  3 15:06 a.out
+drwxr-xr-x 2 kiit kiit  4096 Aug  3 15:36 kiit_class
+
+kiit@BT07041:~$ cd kiit_class
+kiit@BT07041:~/kiit_class$ cd /
+kiit@BT07041:/$ cd home
+kiit@BT07041:/home$ cd kiit
+kiit@BT07041:~$ pwd
+/home/kiit
+
+
+kiit@BT07041:~$ rmdir kiit_class            // removes the directory;
+kiit@BT07041:~$
+
+kiit@BT07041:~$ chmod g+w Hello_World_2.c      // adds access to write;
+kiit@BT07041:~$ ls -la
+total 88
+drwxr-x--- 3 kiit kiit  4096 Aug  3 15:45 .
+drwxr-xr-x 3 root root  4096 Jun 28 00:26 ..
+-rw------- 1 kiit kiit 12288 Aug  1 16:23 .HelloWorld.c.swp
+-rw------- 1 kiit kiit 12288 Aug  1 16:56 .Hello_World.swp
+-rw------- 1 kiit kiit   365 Aug  1 17:12 .bash_history
+-rw-r--r-- 1 kiit kiit   220 Jun 28 00:26 .bash_logout
+-rw-r--r-- 1 kiit kiit  3771 Jun 28 00:26 .bashrc
+drwx------ 2 kiit kiit  4096 Jun 28 00:27 .cache
+-rw-r--r-- 1 kiit kiit     0 Aug  3 15:01 .motd_shown
+-rw-r--r-- 1 kiit kiit   807 Jun 28 00:26 .profile
+-rw-r--r-- 1 kiit kiit     0 Jun 28 00:29 .sudo_as_admin_successful
+-rw------- 1 kiit kiit  7490 Aug  3 15:06 .viminfo
+-rw-r--r-- 1 kiit kiit    69 Aug  1 17:02 Hello_World.c
+-rw-r--r-- 1 kiit kiit   689 Aug  1 17:06 Hello_World.s
+-rw-rw-r-- 1 kiit kiit    68 Aug  3 15:06 Hello_World_2.c
+-rwxr-xr-x 1 kiit kiit 15968 Aug  3 15:06 a.out
+
+kiit@BT07041:~$ chmod g-w Hello_World_2.c      // removes the access to write
+
+
+
+int a  = 3;          -------> global declaration , a global variable;
+int main() 		------>system defined function
+{
+	int b = 2;	------>  local declaration , b local variable;
+	fun() 		------>  user defined function
+}
+
+
+
+
+Data types:
+
+####1> primitive/ basic data type: char , float , int, double, void;###
+2> Derived data type: Array, function , pointer;
+3> User defined data type: Structure , Union , Enumeration; 
+4> Valueless: void;
+
+
+
